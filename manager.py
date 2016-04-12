@@ -4,10 +4,9 @@ import math
 import time
 
 # Read in the environment variables file.
-env = []
+env = {}
 with open(".env", "r") as e:
-    reader = csv.reader(e, delimiter="=")
-    for row in reader:
+    for row in e:
         r = row.strip().split("=")
         env[r[0]] = r[1]
 
